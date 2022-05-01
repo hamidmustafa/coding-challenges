@@ -1,8 +1,13 @@
 import Foundation
 
-// Solution 1, complexity will be O(n^2). This is not an ideal solution, we need something with complexlity as O(n)
-class TwoSum {
-    func twoSum(nums: [Int], target: Int) -> [Int] {
+/// Two sum brute force algo.
+/// Time complexity O(n^2)
+public class TwoSumBruteForce {
+    public static let shared = TwoSumBruteForce()
+    
+    public init() {}
+    
+    public func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var result: Int = 0
         for i in 0...nums.count-1 {
             for j in 1...nums.count-1 {
@@ -15,4 +20,3 @@ class TwoSum {
         return []
     }
 }
-
